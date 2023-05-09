@@ -7,13 +7,15 @@
 
 	protected:
 		std::string type;
+
 	public:
 		Animal();
 		~Animal();
-		Animal(const Animal& copy);
-		Animal& operator=(const Animal& copy);
+		Animal&   operator=(const Animal& copy);
+		Animal(const Animal &copy);
 
-		//makeSound();
+		std::string getType() const;
+		virtual void makeSound() const;
  };
 
 #endif
